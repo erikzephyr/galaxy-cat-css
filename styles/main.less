@@ -1,0 +1,183 @@
+// out: main.css
+@bgColor: #1f1f1f;
+@outerOuterColor: #2a2a2a;
+@outerColor: #2c2c2c;
+@spaceOuterColor: #2d2d2d;
+@planetLightRed: #ff2020;
+@planetHardRed: #ff5353;
+@starColor: white;
+@craterColor: #ff3b3b;
+@craterBorderColor: #ff1e1e;
+@boxWidth: 600px;
+@boxHeight: 600px;
+@borderSize: 3px;
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-radius {
+  border-radius: 50%;
+}
+
+.dimension(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.setPosition(@top, @left) {
+  top: @top;
+  left: @left;
+}
+
+body {
+  .centrar;
+  background-color: @bgColor;
+  height: 100vh;
+}
+
+.box {
+  .centrar;
+  .dimension(@boxWidth, @boxHeight);
+}
+
+.space-outer-outer {
+  .centrar;
+  .border-radius;
+  .dimension(80%, 80%);
+  background-color: @outerOuterColor;
+  box-shadow: 0px 0px 100px rgba(42,42,42,.5);
+}
+
+.space-outer {
+  .centrar;
+  .border-radius;
+  .dimension(80%, 80%);
+  background-color: @outerColor;
+}
+
+.space-outer-copy {
+  .centrar;
+  .border-radius;
+  .dimension(80%, 80%);
+  background-color: @spaceOuterColor;
+}
+
+.planet-shell {
+  .border-radius;
+  .dimension(80%, 80%);
+}
+
+.planet {
+  .border-radius;
+  .dimension(100%, 100%);
+  background: @planetLightRed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.planet-inner {
+  .centrar;
+  .border-radius;
+  .dimension(96%, 96%);
+  background: @planetHardRed;
+}
+
+.crater-one {
+  .border-radius;
+  .dimension(10%, 10%);
+  .setPosition(-30%, 30%);
+  position: relative;
+  background-color: @craterColor;
+  border: @borderSize solid @craterBorderColor;
+  
+}
+
+.crater-two {
+  .border-radius;
+  .dimension(5%, 5%);
+  .setPosition(30%, 50%);
+  position: relative;
+  background-color: @craterColor;
+  border: @borderSize solid @craterBorderColor;
+}
+.crater-three {
+  .border-radius;
+  .dimension(5%, 5%);
+  .setPosition(-40%, 30%);
+  position: relative;
+  background-color: @craterColor;
+}
+.crater-four {
+  .border-radius;
+  .dimension(15%, 15%);
+  .setPosition(10%, 48%);
+  position: relative;
+  background-color: @craterColor;
+}
+
+.cat-box {
+  .dimension(25%, 25%);
+  .setPosition(-40%, 40%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-img {
+  width: 100%;
+}
+
+.star {
+  .border-radius;
+  .dimension(7%, 7%);
+  position: relative;
+  background-color: @starColor;
+}
+
+.one {
+  .setPosition(-70%, -80%);
+}
+.two {
+  .dimension(15px, 15px);
+  .setPosition(70%, -90%);
+  opacity: .6;
+}
+.three {
+  .setPosition(65%, 35%);
+  opacity: .05;
+}
+.four {
+  .dimension(15px, 15px);
+  .setPosition(63%, -50%);
+  opacity: .3;
+}
+.five {
+  .dimension(15px, 15px);
+  .setPosition(35%, 37%);
+  opacity: .4;
+}
+.six {
+  .dimension(8px, 8px);
+  .setPosition(5%, -103%);
+}
+.seven {
+  .dimension(15px, 15px);
+  .setPosition(-30%, -71%);
+  opacity: .4;
+}
+.eight {
+  .dimension(5px, 5px);
+  .setPosition(-60%, 45%);
+  opacity: .9;
+}
+.nine {
+  .dimension(15px, 15px);
+  .setPosition(35%, 60%);
+  opacity: .4;
+}
+
